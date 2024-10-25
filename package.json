@@ -1,0 +1,13 @@
+{
+  "name": "wordpress-react-settings",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "wp-env": "wp-env"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.10.0",
+    "@wordpress/scripts": "^30.3.0"
+  }
+}
