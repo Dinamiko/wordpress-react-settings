@@ -38,3 +38,19 @@ add_action( 'admin_enqueue_scripts', function($page) {
     wp_enqueue_style( 'wp-components' );
 });
 
+function react_settings_page_register_settings() {
+    register_setting(
+        'react-settings-page',
+        'react_settings_page_check_me',
+        array(
+            'type'         => 'boolean',
+            'default'      => false,
+            'show_in_rest' => true,
+            'sanitize_callback' => fn($value) => (bool) $value,
+        )
+    );
+}
+
+add_action( 'admin_init', 'react_settings_page_register_settings' );
+add_action( 'rest_api_init', 'react_settings_page_register_settings' );
+
