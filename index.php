@@ -35,5 +35,6 @@ add_action( 'admin_enqueue_scripts', function($page) {
     );
 
     wp_enqueue_script( 'react-settings-page' );
+    wp_enqueue_style( 'wp-components' );
 });
 
